@@ -1,5 +1,5 @@
 import wrapper from '../utils/wrapper';
 
 export const login = wrapper((req, res) => {
-    res.send('Login page');
+    res.json({ data: `Email: ${req.body.email},  password: ${req.body.password}` });
 });
