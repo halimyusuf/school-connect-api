@@ -1,6 +1,7 @@
-import express from 'express';
-const Router = express.Router();
+import userRouter from './user';
 
-Router.get('/', (req, res) => res.send('Hello world'));
+const baseRoute = '/api/v1';
 
-export default Router;
+export default (app) => {
+    app.use(`${baseRoute}/user`, userRouter);
+};
